@@ -3,7 +3,6 @@
     <head>
         <meta http-equiv="refresh" 
             content="0;url=https://tychence.wordpress.com/"/>
-        
         <title>Tianyi Chen's Introduction HTML Webpage in CS212</title>
     </head>
     <body>
@@ -23,7 +22,6 @@
         <p>I think web programming is crucial to my future career and capstone project success.</p>
         <hr>
         </section>
-
         <section id="Introduction">
         <h4>Introduction:</h4>
         <p>Hi there! I'm Tianyi Chen, you can call me Bruce. I am a computer engineering student. My academic interests falls into artifacial intelligence (machine learning and computer vision), as well as Internet of things. I am a tranferred student from China and this is the first and last year I stay in NAU. My personal intersts is video games and Japan animation.
@@ -34,7 +32,6 @@
         <a href="https://tychence.files.wordpress.com/2024/01/tianyichen_cv.pdf" download="Tianyi_Chen_CV">Click Here to Download My CV</a>
         <hr>    <!-- horizontal line element-->
         </section>
-
         <section id="Skills">
         <h4>Skills:</h4>
         <p>
@@ -50,7 +47,6 @@
             <hr>
         </p>
         </section>
-
         <section id="Project">
         <h4>Project Showcase:</h4>
         <p>
@@ -67,7 +63,6 @@
         <img src="https://tychence.files.wordpress.com/2023/03/img_20221108_144455.jpg" alt="This is the picture of FPGA alarm plaform project" width="400" height="100%"/>
         <hr>    <!-- hyper link element-->
         </section>
-
         <section id="Education">
         <h4>Education and Experience:</h4>
         <table border="1">
@@ -101,13 +96,11 @@
             </tfoot>
         </table>
         </section>
-
         <section id="Contact-Info">
         <h4>Contact Info:</h4>
         <a href="mailto:tc922@nau.edu">tc922@nau.edu</a><br>
         <a href="https://github.com/TyBruceChen">GitHub Profile</a><br> https://tychence.wordpress.com/
         <a href="https://tychence.wordpress.com/">Personal Site</a>
         </section>
-
     </body>
 </html>
