@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="refresh" 
+            content="0;url=https://sites.google.com/nau.edu/ai-telehealth/home" />
+
         <title>
             Tianyi Chen's Introduction HTML Webpage in CS212
         </title>
