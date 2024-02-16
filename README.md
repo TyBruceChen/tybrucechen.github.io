@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="refresh" 
-            content="0;url=https://tychence.wordpress.com/"/>
+        <meta http-equiv="refresh" content="0;url=https://tychence.wordpress.com/"/>
         <title>Tianyi Chen's Introduction HTML Webpage in CS212</title>
     </head>
     <body>
