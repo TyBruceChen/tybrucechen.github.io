@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="refresh" content="0;url=https://tychence.wordpress.com/"/>
-        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
         <h1>Tianyi Chen (CS212 Homework)</h1><hr>
