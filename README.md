@@ -1,3 +1,3 @@
-This is repository is **just for testing github web page**, no pratical contents. And it's published at [https://tybrucechen.github.io/].
+Personal Page of Tianyi (Bruce) Chen
 
-My personal website is at: [https://tychence.wordpress.com/](https://tychence.wordpress.com/).
+Updated at May 6, 20204
