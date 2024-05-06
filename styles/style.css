@@ -1,0 +1,200 @@
+#video{
+    position: fixed;
+    z-index: -100;
+    right: 1px;
+    top: -1px;
+}
+
+body{
+    max-width: 2000px;
+    margin: 1%;
+    font-size: medium;
+}
+
+main{
+    background-color: rgba(234, 231, 231,1);
+    max-width: 1500px;
+    margin: 10%;
+    position: absolute;
+    top: -20%;
+    border-radius: 5%;
+    padding: 3%;
+}
+
+#name{
+    color: rgb(30, 30, 133);
+}
+
+#name__{
+    color: red;
+}
+
+
+#navigationbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+
+    background-color: rgba(117, 208, 179,0.5);
+    min-width: 8%;
+
+    position:fixed;
+    max-width: 12%;
+    top: 30%;
+    border-radius: 4%;
+}
+
+#navigationitems{
+
+    width: 80%;
+    padding: 5%;
+    text-align:justify;
+    font-size: small;
+}
+
+
+
+#CV{
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+object{
+    max-width: 100%;
+}
+
+#Download{
+    border: 2px solid red;
+    text-align: center;
+    background-color: orange;
+}
+
+#Download:hover{
+    transition-duration: 1s;
+
+    background-color: yellow;
+    transform: rotate(360deg);
+    transform-origin:center;
+}
+
+a:hover{
+    color: rgb(147, 113, 29);
+}
+
+
+.section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 5px;
+    margin: 2%;
+}
+
+
+#email{
+    color: blue;
+}
+
+#github{
+    position: relative;
+    top: -23px;
+    left: 220px;
+}
+  
+/*this is the page settings for mobile devices (tablet,phones) which resolution is less than 800px and greater than 400px */
+@media all and (max-width: 1000px) {
+
+    #navigationbar{
+        transform: scale(0.9,0.9);
+        transform-origin: left;
+    }
+    
+    #navigationitems{
+        transform: scale(0.9,0.9);
+        transform-origin: left;
+    }
+
+    img{
+        transform: matrix(1.2,0,0,0.5,0,0);
+        transform-origin: left;
+        max-width: 70%;
+    }
+    #Education{
+        transform: scale(0.9,0.9);
+        transform-origin: left;
+    }
+}
+
+/* this is the settings for smaller moble devices which resolution is less than 400px */
+@media all and (max-width: 650px) {
+
+    #navigationbar{
+        transform: scale(0.7,0.7);
+        transform-origin: left;
+    }
+    
+    #navigationitems{
+        transform: scale(0.7,0.7);
+        transform-origin: left;
+    }
+
+    img{
+        display: none;
+    }
+    iframe{
+        display: none;
+    }
+    object{
+        display: none;
+    }
+    /*
+    img{
+        transform: matrix(1.1,0,0,0.2,0,0);
+        transform-origin: left;
+        max-width: 70%;
+    }
+   */ 
+    #Education{
+        transform: scale(0.65,0.65);
+        transform-origin: left;
+    }
+    #github{
+        position:relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* this is the settings for smaller moble devices which resolution is less than 400px */
+@media all and (max-width: 400px) {
+
+    #navigationbar{
+        transform: scale(0.55,0.55);
+        transform-origin: left;
+    }
+    
+    #navigationitems{
+        transform: scale(0.65,0.65);
+        transform-origin: left;
+    }
+
+    /*img{
+        transform: matrix(1.4,0,0,0.08,0,0);
+        transform-origin: left;
+        max-width: 70%;
+    }*/
+    #Education{
+        transform: scale(0.4,0.4);
+        transform-origin: left;
+    }
+    #github{
+        position:relative;
+        top: 0;
+        left: 0;
+    }
+}
