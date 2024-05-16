@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(104, 104, 225);
+}
+
+img{
+    width: 40%;
+    border-radius: 15%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 30%;
+}
+
+.textualContent-left{
+    position: relative;
+    top: -250px;
+    left: -40%;
+}
+
+.textualContent-right{
+    position: relative;
+    top: -250px;
+    right: -40%;
+}
