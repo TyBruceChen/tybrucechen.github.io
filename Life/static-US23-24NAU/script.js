@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
             const container = document.getElementById('container')
 
-            fetch('imageLoader.json').then((res) => {
+            fetch('./imageLoader.json').then((res) => {
                 return res.json()
             }).then((data) => {
                 console.log(data)
                 for (imgInfo of data){
-                    imgPath = imgInfo.img
+                    imgPath = './' + imgInfo.img
                     imgDate = imgInfo.time
                     imgContent = imgInfo.content
 
