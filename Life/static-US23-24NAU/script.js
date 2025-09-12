@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }).then((data) => {
                 console.log(data)
                 for (imgInfo of data){
-                    imgPath = './' + imgInfo.img
+                    imgPath = imgInfo.img
                     imgDate = imgInfo.time
                     imgContent = imgInfo.content
 
