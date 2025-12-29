@@ -1,3 +1,9 @@
 [
-    {"img": "1.jpeg", "time": "Sep 3rd, 2025", "content": "First Day at UCSB!"}
+    {"img": "1.jpeg", "time": "Sep 3rd, 2025", "content": "First Day at UCSB"},
+    {"img": "2.jpeg", "time": "Oct 16th, 2025", "content": "Honored by Nobel Professors at UCSB"},
+    {"img": "3.jpeg", "time": "Dec 6th, 2025", "content": "Climbing with Friend Eliah"}, 
+    {"img": "4.jpeg", "time": "Dec 10th, 2025", "content": "Indoor BBQ with Leo, Eric, and Daniel"},
+    {"img": "5.jpeg", "time": "Dec 20th, 2025", "content": "Friend Visiting at UCSB"},
+    {"img": "6.jpeg", "time": "Dec 20th, 2025", "content": "Making Sweet Dumplings"},
+    {"img": "7.jpeg", "time": "Dec 21st, 2025", "content": "Exhausted Weight Training"}
 ]
