@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Ty.(Bruce) C.'s Journey</title>
+        <title>Apprentice Bruce</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="./styles/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,61 +18,44 @@
     </head>
 
     <body>
-        <script src="./styles/script.js"></script>
+        <script src="./styles/bg-video.js"></script>
         <header>
             <div id="video">
             </div>
             <div id="video-info" style="position: fixed;
-            top: 90%; font-size: small; left: 55%;z-index: 2;">
+            top: 90%; font-size: small; left: 65%;z-index: 2;">
                 <button onclick="videoControl()" id="videoControl" style="background-color: rgba(200, 200, 200, 0.6);">
                     Display background Anime
                 </button>
                 <button onclick="videoVoice()" id="videoVoice" style="background-color: rgba(200, 200, 200, 0.5);">Unmute background music</button>
                 <p style="font-size: small; color: rgba(10, 10, 10, 0.5); display: none;" id="videoSource">Video source from <a href="https://www.youtube.com/@TOHOanimation">Youtube: TOHO animation チャンネル</a></p>
             </div>
-
-            <nav>
-                <div id="navigationbar">
-                <div id="navigationitems"><hr><a href="index.html#Introduction">Introduction</a><hr></div>
-                <div id="navigationitems"><a href="index.html#Skills">Experienced Fields</a><hr></div>
-                <div id="navigationitems"><a href="index.html#Research">Publications</a><hr></div>
-                <div id="navigationitems"><a href="index.html#Project">Project (outdated)</a><hr></div>
-                <div id="navigationitems"><a href="index.html#Education">Education</a><hr></div>
-                <div id="navigationitems"><a href="index.html#life">Life</a><hr></div>
-                <div id="navigationitems"><a href="index.html#Contact-Info">Contact Info</a><hr></div>
-                <div id="navigationitems"><a href="https://github.com/TyBruceChen"><b>GitHub</b></a><hr></div>
-                </div>
-            </nav>
         </header>
         <main>
+            <nav>
+                <div id="navigationbar">
+                    <div id="navigationitems"><a href="index.html#About"><b>About</b></a></div>
+                    <div id="navigationitems"><a href="resume/resume.html">Resume</a></div>
+                    <div id="navigationitems"><a href="index.html#Research"><b>Publications</b></a></div>
+                    <div id="navigationitems"><a href="index.html#life"><b>Life</b></a></div>
+                    <div id="navigationitems"><a href="https://github.com/TyBruceChen"><i>GitHub</i></a></div>
+                </div>
+            </nav>
+
+            <section id="About">
             <h1 style="text-align: center;" id="name">Tianyi (Bruce) Chen</div></h1><hr>
             </section>
 
             <section id="Introduction">
             <h4>Introduction:</h4>
             <div id="basicInfo" style="display: flex; flex-direction: row;">
-                <div style="text-align: justify; padding-right: 20%;">My name is Tianyi Chen (陳天逸), and I received the Computer Engineering (BS) degree from Northern Arizona University at 2024. My primary academic focus is on machine learning and applied AI. In my leisure time, I'd like to engage in small-scale projects that facilitate my life. Currently, they have included server hosting, and combining hardware (IoTs) and software to build practical devices, server hosting, remote accessing, and docker composing. Additionally, I have passions for video games and animations. Aside from Chinese, both English and Japanese (I got a <a href="https://tychence.files.wordpress.com/2024/02/jtest-1.png">D-level J.test certificate</a>) are OK for me.
+                <div style="text-align: justify; padding-right: 20%;">Hi there! I'm Tianyi (Bruce) Chen (陳天逸), come from Flagstaff, AZ, where I got my bachelor of science in computer engineering degree at Northern Arizona University (NAU) in 2024. Now I'm pursuing my MS degree in computer engineering at UC Santa Barbara. <br> My academic focuses currently fall on the optimization and applied AI. As an engineer, I always engage myself in the "new wine" and discovery. Therefore, my projects often go beyond my academic focuses into fields like softaware engineering, electrical engineering, and mechanical engineering. You can find the corresponded information in this page if interested. <br> I'm also interested in history and religion, from which I firmly believe that empathy, equality, mercy and forgiveness are the solution to human suffering. I'd like to talk with people from different places. Aside from Chinese, both English and Japanese (I got a <a href="https://tychence.files.wordpress.com/2024/02/jtest-1.png">D-level J.test certificate</a>) are fine for me.
                 </div>
-                <div>
-                    <img src="./static/Tianyi Chen.jpg" alt="" style="border-color: pink; max-width: 100%; border-style: solid; position: relative; right: 30%;">
+                <div id="selfie">
+                    <img src="./static/Tianyi Chen.jpg" alt="" style="border-color: rgb(248, 189, 234); border-style: solid;">
                 </div>
             </div>
             <br>
-            <div id="CV">
-                <div class="CV">
-                    <object data="./static/TianyiChen_CV_Full.pdf" type="application/pdf" width="600" style="transform:scaleX(1.1);"><p>This is my Resume (updated at Dec, 2024)</p></object><br>
-                </div>
-                <div class="CV">
-                    <div id="Download">
-                        <p>Click Here to Download My CV</p>
-                        <p>
-                            <a href="./static/resume.pdf">Formal Version</a>/
-                            <a href="./static/TianyiChen_CV_Full.pdf" download="Tianyi_Chen_CV_Full">Long Version</a>/
-                            <a href="./static/TianyiChen_CV_One_Page.pdf" download="Tianyi_Chen_CV_Short">Short Version (Old)</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
             <hr>    <!-- horizontal line element-->
             </section>
 
@@ -98,10 +81,8 @@
             </section>
             
             <section id="Research">
-                <h4>Publications: <a href="https://scholar.google.com/citations?user=r2ZKGxAAAAAJ&hl=en" style="position: relative; left: 50px; font-style: normal;">Google Scholar</a></h4>
+                <h4>Publications: <a href="https://scholar.google.com/citations?user=r2ZKGxAAAAAJ&hl=en" style="position: relative; left: 1.5vw; font-style: normal;">Google Scholar</a></h4>
                 <div style="position: relative; top: -10px;">
-                    Energy-Efficient Semantic Image Transmission in LEO Satellite-to-Ground Networks via Adaptive SwinJSCC and Deep Reinforcement Learning (Submitted on July 19, 2025)
-                    <br>
                     Tuy Tan Nguyen, <b>Tianyi Chen</b>, Ian Philippi, Quoc Bao Phan, Shunri Kudo, Samsul Huda, and Yasuyuki Nogami, "A Highly Secure and Accurate System for COVID-19 Diagnosis from Chest X-Ray Images," 67th IEEE International Midwest Symposium on Circuits and Systems (MWSCAS 2024),  Springfield, MA, 11–14 Aug. 2024, pp. 980–984. (<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=r2ZKGxAAAAAJ&citation_for_view=r2ZKGxAAAAAJ:d1gkVwhDpl0C">accepted by MWSCAS</a>)
                     <br>
                     <b>Tianyi Chen</b>, Ian Philippi, Quoc Bao Phan, Linh Nguyen, Ngoc Thang Bui, Carlo daCunha, and Tuy Tan Nguyen, "A Vision Transformer Machine Learning Model for COVID-19 Diagnosis Using Chest X-Ray Images,"  Healthcare Analytics, vol. 5, pp. 100332, Jun. 2024. (<a href="https://www.sciencedirect.com/science/article/pii/S2772442524000340">Journal Link</a>)
@@ -118,7 +99,7 @@
             <hr>
             
             <section id="Project">
-            <h4>Project Experience: </h4>
+            <h4>Project Experience: (Outdated)</h4>
             <details>
             <summary>Projects with computer vision, FPGA & IoTs. <b>Click to expand the detail.</b> (Stop updating at Sep, 2024, please check CV for latest info)</summary>
             <div class="section">
@@ -131,11 +112,8 @@
                     </p>
                 </div>
                 <div class="project">
-                    <img src="static/project-imgs/project-2-gemini-character-dencentify.png" alt="This is the picture of the poster presentation of AI-Telehealth Phase-II" width="450px">
-                    <div style="display: flex; flex-direction: row;">
-                        <iframe src="https://www.sciencedirect.com/science/article/pii/S2772442524000340?via%3Dihub" width="200px" height="50%" style="width: 500px; height: 400px; transform: scale(0.5); transform-origin: top left; margin-bottom: -190px; margin-right: -250px;"> </iframe>
-                        <iframe src="https://tybrucechen.github.io/Viz-animint2-research-covid-19-chest-xrays/" type="text/html" width="200px" height="50%" style="width: 450px; height: 400px; transform: scale(0.5); transform-origin: top left; margin-bottom: -190px; margin-right: -200px;"></iframe>
-                    </div>
+                    <img src="static/project-imgs/project-2-gemini-character-dencentify.png" alt="This is the picture of the poster presentation of AI-Telehealth Phase-II">
+                    
                 </div>
                 <div class="project">
                     <p style="text-align: justify; padding: 3%;">
@@ -167,7 +145,7 @@
 
             <section id="Education">
             <h4>Education:</h4>
-            <table border="1">
+            <table border="solid black">
                 <thead>
                     <tr>
                         <th>Place</th>
@@ -214,23 +192,22 @@
 
             <section id="life">
                 <h4>Life: </h4>
-                <div style="position: relative; top: -10px; left: 10%;">
-                    <p><a href="Life/US23-24NAU.html">Life in USA (2023 Aug - 2024 May, Northern Arizona University, BS)</a></p>
-                    <p><a href="">Life in CN (As a research assistant)</a></p>
-                    <p><a href="Life/US25.html">Life in USA (2025 Sep - Now, University of California at Santa Barbara (UCSB), MS)</a></p>
+                <div style="position: relative; top: -10px; left: 3%;">
+                    <p><a href="Life/US23-24NAU.html">Life in USA</a> 2023 Aug - 2024 May, Northern Arizona University, BS</p>
+                    <p><a href="Life/US25.html">Life in USA</a> 2025 Sep - Now, UC Santa Barbara, MS</p>
                 </div>
             </section>
 
             <section id="Contact-Info">
                 <h4>Contact Info:</h4>
                 <div style="position: relative; top: -10px;">
-                    <a href="mailto:tianyi.bruce.chen@gmail.com">tianyi.bruce.chen@gmail.com</a>(Preferred)/<a href="mailto:bruce.c.work.922@gmail.com">bruce.c.work.922@gmail.com</a>(Work)/<a href="mailto:ty_bruce.chen@outlook.com" id="email">ty_bruce.chen@outlook.com</a>/ School Accounts: <a href="mailto:tianyi_chen@ucsb.edu">tianyi_chen@ucsb.edu</a>/<a href="mailto:tc922@nau.edu" id="email">tc922@nau.edu</a><br>
+                    <a href="mailto:tianyi.bruce.chen@gmail.com">tianyi.bruce.chen@gmail.com</a>(Preferred)<br><a href="mailto:bruce.c.work.922@gmail.com">bruce.c.work.922@gmail.com</a>(Work)<br><a href="mailto:ty_bruce.chen@outlook.com" id="email-NA">ty_bruce.chen@outlook.com</a><br> School Accounts: <a href="mailto:tianyi_chen@ucsb.edu" id="email-NA">tianyi_chen@ucsb.edu</a><br>
                     GitHub: <a href="https://github.com/TyBruceChen">https://github.com/TyBruceChen</a><br>
                     LinkedIn: <a href="https://www.linkedin.com/in/tianyibrucechen/">https://www.linkedin.com/in/tianyibrucechen/</a>
                 </div>
             </section>
             <footer>
-                <p>Last Updated: Jan 2nd, 2026</p>
+                <p>Last Updated: Mar 6th, 2026</p>
             </footer>
         </main>
     </div>

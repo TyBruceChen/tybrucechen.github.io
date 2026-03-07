@@ -3,8 +3,8 @@ function videoInit(){
     var parent = document.getElementById('video')
     var videosrc = document.createElement('source')
 
-    video.autoplay = "true"
-    video.loop = "true"
+    video.autoplay = false
+    video.loop = true
     video.muted = true  //requirment for chrome66
     video.volume = '0.75'
     video.style.opacity = '0.7'
@@ -28,14 +28,14 @@ function videoControl(){
         video.style.display = 'none'
         button1.textContent = 'Display background Anime'
         document.getElementById('videoSource').style.display = 'none'
-        document.getElementsByTagName('main')[0].style.backgroundColor = 'rgba(234, 231, 231,1)'
+        document.getElementsByTagName('main')[0].style.backgroundColor = 'rgba(255, 255, 255, 0.729)'
     }
     else{
         video.style.display = 'block'
         button1.textContent = 'Hind background Anime'
         document.getElementById('videoSource').style.display = 'block'
         console.log(document.getElementsByTagName('main')[0].style.backgroundColor)
-        document.getElementsByTagName('main')[0].style.backgroundColor = 'rgba(234, 231, 231,0)'
+        document.getElementsByTagName('main')[0].style.backgroundColor = 'rgba(255, 255, 255, 0.4)'
     }
 
 }
