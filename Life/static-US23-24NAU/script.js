@@ -1,80 +1,92 @@
+document.addEventListener('DOMContentLoaded', () => {
+  loadTrips();
+});
 
-document.addEventListener('DOMContentLoaded', function(){
-    let init_aos_data_id = 1;
+async function loadTrips() {
+  try {
+    // JSON path ---------------------------------------------------------
+    const response = await fetch('./static-US23-24NAU/imageLoader.json');
+    if (!response.ok) {
+      console.log("Error");
+      throw new Error('Failed to load imageLoader.json');
+    }
+    const trips = await response.json();
+    renderTimeline(trips);
+    initScrollObserver();
+  } catch (error) {
+    console.error('Error loading trip data:', error);
+    document.getElementById('timeline').innerHTML = `
+      <div style="text-align:center; padding:60px 20px; color:rgba(255,255,255,0.3);">
+        <p style="font-size:1.2rem; margin-bottom:12px;">Unable to load trip data</p>
+        <p style="font-size:0.85rem;">Please ensure <code>imageLoader.json</code> exists in the current folder.</p>
+      </div>
+    `;
+  }
+}
 
-            const container = document.getElementById('container')
+function renderTimeline(trips) {
+  const timeline = document.getElementById('timeline');
+  timeline.innerHTML = '';
 
-            fetch('./static-US23-24NAU/imageLoader.json').then((res) => {
-                return res.json()
-            }).then((data) => {
-                console.log(data)
-                for (imgInfo of data){
-                    imgPath = './static-US23-24NAU/' + imgInfo.img
-                    imgDate = imgInfo.time
-                    imgContent = imgInfo.content
+  trips.forEach((trip, index) => {
+    const isEven = index % 2 === 0;
+    const directionClass = isEven ? 'from-left' : 'from-right';
+    const orderLabel = String(index + 1).padStart(2, '0');
 
-                    var orient;
-                    if (init_aos_data_id%2 == 0){
-                        orient = 'right'
-                        fade_orient = 'left'
-                    }
-                    else{
-                        orient = 'left'
-                        fade_orient = 'right'
-                    }
-                    console.log(init_aos_data_id)
+    const entry = document.createElement('div');
+    entry.classList.add('timeline-entry', directionClass);
+    entry.setAttribute('data-index', index);
+    // change src to corrresponding sub-folder -------------------------------------------------------
+    entry.innerHTML = `
+      <div class="entry-image-wrapper">
+        <div class="entry-image-container">
+          <img
+            src="static-US23-24NAU/${escapeHTML(trip.img)}"
+            alt="Trip photo ${index + 1}"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22480%22 height=%22320%22><rect width=%22480%22 height=%22320%22 fill=%22%231a1a2e%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22rgba(255,255,255,0.15)%22 font-family=%22sans-serif%22 font-size=%2218%22>Photo ${index + 1}</text></svg>';"
+          />
+        </div>
+      </div>
+      <div class="entry-text-wrapper">
+        <div class="entry-order">${orderLabel}</div>
+        <div class="entry-time">${escapeHTML(trip.time)}</div>
+        <div class="entry-content">${escapeHTML(trip.content)}</div>
+      </div>
+    `;
 
-                    const insertHTMLContent = `<data-id="${init_aos_data_id}" class="aos-item" data-aos="fade-up-${fade_orient}">
-                    <img src="${imgPath}" alt="">
-                    <div class="textualContent-${orient}">
-                        <hr width="40%" style="color: yellow;">
-                        <p style="text-align: center; color: yellow; position: relative; top: -50px;">${imgDate}</p>
-                        <p style="color: yellow; text-align: center; position: relative; top: -50px;">${imgContent}</p>
-                    </div>`
+    timeline.appendChild(entry);
+  });
+}
 
-                    container.insertAdjacentHTML('beforeend', insertHTMLContent)
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
 
-                    init_aos_data_id = init_aos_data_id + 1
-                }
-            }).catch((error) => {
-                console.log(`Error: ${error}`)
-            })
+function initScrollObserver() {
+  const entries = document.querySelectorAll('.timeline-entry');
 
-            console.log(`Window Size: ${window.innerWidth}`)
+  // Intersection Observer for fade-in
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -80px 0px',
+    threshold: 0.15
+  };
 
-            const imgList = document.getElementsByTagName('img')
-            const textHR = []
-            const textHL = []
-            
-            var i = 0;
-            for (imgElement of imgList){
-                console.log(imgElement)
-                imgElement.style.width = '60%'
-                imgElement.style.left = '20%'
-                imgHeight = imgElement.height
-                if (i/2 == 0){
-                    textHL.push(imgHeight)
-                }
-                else{
-                    textHR.push(imgHeight)
-                }
-                i++
-            }
-            
-            const textListR = document.getElementsByClassName('textualContent-right')
-            const textListL = document.getElementsByClassName('textualContent-left')
+  const observer = new IntersectionObserver((observerEntries) => {
+    observerEntries.forEach((obsEntry) => {
+      if (obsEntry.isIntersecting) {
+        obsEntry.target.classList.add('visible');
+      } else {
+        // Remove visible class when scrolled out for re-animation
+        obsEntry.target.classList.remove('visible');
+      }
+    });
+  }, observerOptions);
 
-            i = 0
-            for (imgTextR of textListR){
-                imgTextR.style.right = '-40%'
-                imgTextR.style.top = textHR[i]/2 
-                i++
-            }
-
-            i = 0
-            for (imgTextL of textListL){
-                imgTextL.style.left = '-40%'
-                imgTextL.style.top = textHL[i]/2
-                i++
-            }
-})
+  entries.forEach((entry) => {
+    observer.observe(entry);
+  });
+}

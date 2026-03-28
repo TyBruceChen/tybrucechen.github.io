@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <link rel="stylesheet" href="styles.css">
-        <title>Life in the US (2025 Sep During University of California at Santa Barbara in MS)</title>
-    </head>
-    <body>
-        <header>
-            <h1 style="text-align: center; position: relative; top: -10px;">Life in the US (2025 Sep During University of California at Santa Barbara in MS)</h1>
-        </header>
-        <main>
-            <div id="container" style="margin: 0%; display: flex; flex-direction: column; justify-content: center;">
-                
-            </div>
-            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-            <script>
-                AOS.init(
-                    {
-                    delay: 300,
-                    duration: 800}
-                );
-            </script>
-            <script src="static-US25-UCSB/script.js"></script>
-        </main>
-        <footer>
-            <h6 style="position: fixed; left: 90%; top: 90%;"><a href="../index.html" style="text-decoration: none;font-size: medium; color: rgb(206, 206, 164);">Home Page</a></h6>
-        </footer>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCSB School Time</title>
+  <link rel="stylesheet" href="template.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #0a0a0f;">
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">2025 - Now UCSB</h1>
+      <p class="hero-subtitle">UC Santa Barbara School Time</p>
+      <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script src="static-US25-UCSB/script.js"></script>
+  <!-- Timeline -->
+  <main class="timeline-container">
+    <div class="timeline-line"></div>
+    <div id="timeline" class="timeline"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>✈ Until the next adventure...</p>
+    <p style="font-size: x-small;">This layout was mainly coded by Claude but got modified</p>
+    <b style="position: fixed; left: 90vw; top: 90vh; width: 10vw; height: auto; text-align: left; overflow-wrap: break-word; word-break: break-word; "><a href="../index.html" style="text-decoration: none;font-size: medium; color: rgb(206, 206, 164);">Home Page</a></b>
+  </footer>
+</body>
 </html>
