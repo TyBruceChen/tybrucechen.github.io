@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadTrips() {
   try {
+    // JSON path ---------------------------------------------------------
     const response = await fetch('./static-US25-UCSB/imageLoader.json');
     if (!response.ok) {
       console.log("Error");
@@ -23,6 +24,12 @@ async function loadTrips() {
   }
 }
 
+function imageExists(url) {
+  return fetch(url, { method: 'HEAD' })
+    .then(res => res.ok)
+    .catch(() => false);
+}
+
 function renderTimeline(trips) {
   const timeline = document.getElementById('timeline');
   timeline.innerHTML = '';
@@ -32,19 +39,25 @@ function renderTimeline(trips) {
     const directionClass = isEven ? 'from-left' : 'from-right';
     const orderLabel = String(index + 1).padStart(2, '0');
 
+    const imgName = escapeHTML(trip.img);
+    const originalImgPath = `static-US-25-UCSB/original_imgs/${imgName}`;
+    const webImgPath = `static-US-25-UCSB/web_imgs/${imgName}`;
+
     const entry = document.createElement('div');
     entry.classList.add('timeline-entry', directionClass);
     entry.setAttribute('data-index', index);
-
+    console.log(webImgPath);
     entry.innerHTML = `
       <div class="entry-image-wrapper">
         <div class="entry-image-container">
-          <img
-            src="static-US25-UCSB/${escapeHTML(trip.img)}"
-            alt="Trip photo ${index + 1}"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22480%22 height=%22320%22><rect width=%22480%22 height=%22320%22 fill=%22%231a1a2e%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22rgba(255,255,255,0.15)%22 font-family=%22sans-serif%22 font-size=%2218%22>Photo ${index + 1}</text></svg>';"
-          />
+          <a class="original-img-link">
+            <img
+              src="${webImgPath}"
+              alt="Trip photo ${index + 1}"
+              loading="lazy"
+              onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22480%22 height=%22320%22><rect width=%22480%22 height=%22320%22 fill=%22%231a1a2e%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22rgba(255,255,255,0.15)%22 font-family=%22sans-serif%22 font-size=%2218%22>Photo ${index + 1}</text></svg>';"
+            />
+          </a>
         </div>
       </div>
       <div class="entry-text-wrapper">
@@ -55,6 +68,17 @@ function renderTimeline(trips) {
     `;
 
     timeline.appendChild(entry);
+
+    const link = entry.querySelector('.original-img-link');
+
+    imageExists(originalImgPath).then(exists => {
+      if (exists) {
+        link.href = originalImgPath;
+        link.target = '_blank';
+      } else {
+        link.style.cursor = 'default';
+      }
+    });
   });
 }
 
