@@ -40,13 +40,12 @@ function renderTimeline(trips) {
     const orderLabel = String(index + 1).padStart(2, '0');
 
     const imgName = escapeHTML(trip.img);
-    const originalImgPath = `static-US-25-UCSB/original_imgs/${imgName}`;
-    const webImgPath = `static-US-25-UCSB/web_imgs/${imgName}`;
+    const originalImgPath = `static-US25-UCSB/original_imgs/${imgName}`;
+    const webImgPath = `static-US25-UCSB/web_imgs/${imgName}`;
 
     const entry = document.createElement('div');
     entry.classList.add('timeline-entry', directionClass);
     entry.setAttribute('data-index', index);
-    console.log(webImgPath);
     entry.innerHTML = `
       <div class="entry-image-wrapper">
         <div class="entry-image-container">
