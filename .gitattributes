@@ -1,0 +1,12 @@
+Life/static-US23-24NAU/web_imgs/ filter=lfs diff=lfs merge=lfs -text
+Life/static-US26-SF-travel/web_imgs/ filter=lfs diff=lfs merge=lfs -text
+Life/static-US25-UCSB/original_imgs/ filter=lfs diff=lfs merge=lfs -text
+Life/static-US26-SF-travel/original_imgs/ filter=lfs diff=lfs merge=lfs -text
+static/mushyokutense.mp4 filter=lfs diff=lfs merge=lfs -text
+static/resume.pdf filter=lfs diff=lfs merge=lfs -text
+Life/static-US25-UCSB/web_imgs/ filter=lfs diff=lfs merge=lfs -text
+static/project-imgs filter=lfs diff=lfs merge=lfs -text
+static/Tianyi[[:space:]]Chen.jpg filter=lfs diff=lfs merge=lfs -text
+static/TianyiChen_CV[[:space:]](7).pdf filter=lfs diff=lfs merge=lfs -text
+static/TianyiChen_CV_Full.pdf filter=lfs diff=lfs merge=lfs -text
+static/TianyiChen_CV_One_Page.pdf filter=lfs diff=lfs merge=lfs -text
